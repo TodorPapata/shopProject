@@ -1,13 +1,13 @@
-import { CatalogService } from './catalog.service';
-import { UploadService } from './upload.service';
-import { ListUploadComponent } from './list-upload/list-upload.component';
-import { FormUploadComponent } from './form-upload/form-upload.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { ProductListComponent } from './product-list/product-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UploadFileService } from './upload.service';
+import { CatalogService } from './catalog.service';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ProductListComponent } from './product-list/product-list.component';
+import { DetailsUploadComponent } from './details-upload/details-upload.component';
+import { FormUploadComponent } from './upload-form/form-upload.component';
+import { ListUploadComponent } from './uploads-list/list-upload.component';
 
 @NgModule({
   imports: [
@@ -17,17 +17,17 @@ import { CommonModule } from '@angular/common';
   ],
   declarations: [
     ProductListComponent,
-    ProductDetailsComponent,
+    DetailsUploadComponent,
     FormUploadComponent,
     ListUploadComponent
   ],
   providers: [
     CatalogService,
-    UploadService
+    UploadFileService
   ],
   exports: [
     ProductListComponent,
-    ProductDetailsComponent,
+    DetailsUploadComponent,
     FormUploadComponent,
     ListUploadComponent
   ]

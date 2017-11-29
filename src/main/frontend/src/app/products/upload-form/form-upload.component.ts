@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpResponse, HttpEventType } from '@angular/common/http';
-import { UploadService } from '../upload.service';
+import { UploadFileService } from '../upload.service';
 
 @Component({
   selector: 'form-upload',
@@ -13,7 +13,7 @@ export class FormUploadComponent implements OnInit {
   currentFileUpload: File;
   progress: { percentage: number } = { percentage: 0 };
 
-  constructor(private uploadService: UploadService) { }
+  constructor(private uploadService: UploadFileService) { }
 
   ngOnInit() {
   }

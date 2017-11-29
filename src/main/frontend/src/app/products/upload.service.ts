@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class UploadService {
+export class UploadFileService {
 
   constructor(private http: HttpClient) { }
 
@@ -23,6 +23,6 @@ export class UploadService {
   }
 
   getFiles(): Observable<string[]> {
-    return this.http.get<string[]>('/api/upload/files');
+    return this.http.get<string[]>('/api/upload/');
   }
 }
