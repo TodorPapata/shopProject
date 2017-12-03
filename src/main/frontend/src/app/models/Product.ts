@@ -1,4 +1,5 @@
+import { ProductTemplate } from './ProductTemplate';
 export class Product {
-    private id: number;
-    private 
+    id: number;
+    productTemplate: ProductTemplate;
 }
