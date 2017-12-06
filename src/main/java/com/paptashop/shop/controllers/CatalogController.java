@@ -3,6 +3,8 @@ package com.paptashop.shop.controllers;
 import com.paptashop.shop.entities.ProductTemplate;
 import com.paptashop.shop.services.CatalogServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,5 +36,10 @@ public class CatalogController {
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public void addProduct(@RequestBody @Valid ProductTemplate productTemplate){
         this.catalogService.addProductTemplate(productTemplate);
+    }
+
+    @RequestMapping(value = "/paged", method = RequestMethod.GET)
+    public ResponseEntity<Page<ProductTemplate>> getAllPaged(Pageable pageable) {
+        return ResponseEntity.ok().body(this.catalogService.showProductTemplatesPaged(pageable));
     }
 }
