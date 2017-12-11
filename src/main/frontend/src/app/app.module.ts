@@ -4,11 +4,13 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductsModule } from './products/products.module';
 import { NgModule } from '@angular/core';
+import { PagerComponent } from './pager/pager.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
 
 const appRoutes: Routes = [
   {
     path: 'heroes',
-    component: AppComponent,
+    component: ProductListComponent,
     data: { title: 'Heroes List' }
   },
   {
@@ -16,13 +18,13 @@ const appRoutes: Routes = [
     redirectTo: '/heroes',
     pathMatch: 'full'
   },
-  { path: '**', component: AppComponent }
+  { path: '**', component: ProductListComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

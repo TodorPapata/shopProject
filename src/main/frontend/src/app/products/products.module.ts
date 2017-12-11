@@ -1,3 +1,4 @@
+import { PagerComponent } from './../pager/pager.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UploadFileService } from './upload.service';
 import { CatalogService } from './catalog.service';
@@ -8,7 +9,6 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { DetailsUploadComponent } from './details-upload/details-upload.component';
 import { FormUploadComponent } from './upload-form/form-upload.component';
 import { ListUploadComponent } from './uploads-list/list-upload.component';
-
 @NgModule({
   imports: [
     CommonModule,
@@ -19,7 +19,8 @@ import { ListUploadComponent } from './uploads-list/list-upload.component';
     ProductListComponent,
     DetailsUploadComponent,
     FormUploadComponent,
-    ListUploadComponent
+    ListUploadComponent,
+    PagerComponent
   ],
   providers: [
     CatalogService,
@@ -29,7 +30,8 @@ import { ListUploadComponent } from './uploads-list/list-upload.component';
     ProductListComponent,
     DetailsUploadComponent,
     FormUploadComponent,
-    ListUploadComponent
+    ListUploadComponent,
+    PagerComponent
   ]
 })
 export class ProductsModule { }
