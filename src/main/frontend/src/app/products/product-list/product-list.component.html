@@ -1,6 +1,21 @@
 <div class="container"> 
   <div class="text-center"> 
     <app-pager [numberOfPages]=5></app-pager>
-    <details-upload></details-upload>
+    <ul class="pagination justify-content-center">
+      <li>
+        <a aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li *ngFor= "let page of getPages()" [ngClass]="{active:currentPage === page}"><a (click)="goToPage(page)">{{page}}</a></li>
+      <li>
+        <a aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+    <div *ngFor="let product of products.content">
+      <details-upload productTemplate={{product}}></details-upload>
+    </div>
   </div>
 </div>

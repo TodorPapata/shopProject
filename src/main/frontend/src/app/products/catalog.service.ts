@@ -1,9 +1,10 @@
 import { PaginationPage } from './../models/Pagination';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import { Http } from '@angular/http';
+import { Http, RequestOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Product } from '../models/Product';
+import { ProductTemplate } from '../models/ProductTemplate';
 
 @Injectable()
 export class CatalogService {
@@ -11,11 +12,14 @@ export class CatalogService {
 
   constructor(private http: HttpClient) { }
 
-  getProducts(): Observable<PaginationPage<Product[]>> {
+  getProducts(page: number, pageSize: number): Observable<PaginationPage<ProductTemplate>> {
     // let headers = new Headers({ 'Content-Type': 'application/json' });
     // let options = new RequestOptions({ headers: headers });
+    let params = new HttpParams();
+    params.set('size', `${pageSize}`);
+    params.set('page', `${page}`);
 
-    return this.http.get<PaginationPage<Product[]>>(this.productsUrl);
+    return this.http.get<PaginationPage<ProductTemplate>>(this.productsUrl, {params: params});
   }
 
 }

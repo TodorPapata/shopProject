@@ -1,3 +1,4 @@
+import { ProductTemplate } from './../../models/ProductTemplate';
 import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
@@ -8,6 +9,7 @@ import {Component, OnInit, Input} from '@angular/core';
 export class DetailsUploadComponent implements OnInit {
 
   @Input() fileUpload: string;
+  @Input() productTemplate: ProductTemplate;
 
   constructor() {}
 
