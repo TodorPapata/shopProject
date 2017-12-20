@@ -16,7 +16,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Controller
-@RequestMapping("/products")
+@RequestMapping("/api/products")
 public class CatalogController {
     @Autowired
     private CatalogServiceInterface catalogService;

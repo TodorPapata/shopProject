@@ -8,7 +8,7 @@ import { ProductTemplate } from '../models/ProductTemplate';
 
 @Injectable()
 export class CatalogService {
-  private productsUrl = 'api/products';
+  private productsUrl = 'api/products/paged';
 
   constructor(private http: HttpClient) { }
 
@@ -16,8 +16,8 @@ export class CatalogService {
     // let headers = new Headers({ 'Content-Type': 'application/json' });
     // let options = new RequestOptions({ headers: headers });
     let params = new HttpParams();
-    params.set('size', `${pageSize}`);
-    params.set('page', `${page}`);
+    params = params.append('size', `${pageSize}`);
+    params = params.append('page', `${page}`);
 
     return this.http.get<PaginationPage<ProductTemplate>>(this.productsUrl, {params: params});
   }

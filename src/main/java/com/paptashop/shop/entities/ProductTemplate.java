@@ -26,6 +26,18 @@ public class ProductTemplate {
     @NotNull
     private Date dateAdded;
 
+    public ProductTemplate() {
+    }
+
+    public ProductTemplate(Long id, String name, BigDecimal price, String code, String imageURL, Date dateAdded) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.code = code;
+        this.imageURL = imageURL;
+        this.dateAdded = dateAdded;
+    }
+
     public Long getId() {
         return id;
     }

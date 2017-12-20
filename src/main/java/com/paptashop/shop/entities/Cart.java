@@ -15,6 +15,7 @@ public class Cart {
     @NotNull
     private User user;
     @OneToMany
+    @JoinColumn(name = "products", referencedColumnName = "id")
     private List<Product> products;
     private BigDecimal totalValue;
 
