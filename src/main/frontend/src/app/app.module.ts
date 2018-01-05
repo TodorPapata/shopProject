@@ -6,6 +6,7 @@ import { ProductsModule } from './products/products.module';
 import { NgModule } from '@angular/core';
 import { PagerComponent } from './pager/pager.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
+import { UploadProductComponent } from './products/upload-product/upload-product.component';
 
 const appRoutes: Routes = [
   {
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
     redirectTo: '/heroes',
     pathMatch: 'full'
   },
+  { path: 'add', component: UploadProductComponent},
   { path: '**', component: ProductListComponent }
 ];
 

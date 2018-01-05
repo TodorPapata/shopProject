@@ -1,10 +1,10 @@
+import { ProductTemplate } from './../models/ProductTemplate';
 import { PaginationPage } from './../models/Pagination';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Http, RequestOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Product } from '../models/Product';
-import { ProductTemplate } from '../models/ProductTemplate';
 
 @Injectable()
 export class CatalogService {
@@ -19,7 +19,11 @@ export class CatalogService {
     params = params.append('size', `${pageSize}`);
     params = params.append('page', `${page}`);
 
-    return this.http.get<PaginationPage<ProductTemplate>>(this.productsUrl, {params: params});
+    return this.http.get<PaginationPage<ProductTemplate>>(this.productsUrl, { params: params });
+  }
+
+  createProduct(prouct: ProductTemplate) {
+    
   }
 
 }

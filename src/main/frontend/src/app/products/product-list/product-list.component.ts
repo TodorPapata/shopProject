@@ -17,13 +17,15 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.goToPage(1);
-    this.numberOfPages = this.products.totalPages;
   }
 
   goToPage(pageNumber: number) {
     this.currentPage = pageNumber;
-    this.catalogService.getProducts(this.currentPage - 1, 3)
-      .subscribe(products => this.products = products,
+    this.catalogService.getProducts(this.currentPage - 1, 8)
+      .subscribe(products => {
+         this.products = products;
+         this.numberOfPages = this.products.totalPages;
+      },
       err => this.products = { number: 1, size: 0, content: [{ id: 1, name: 'test' }] });
   }
 
@@ -32,6 +34,7 @@ export class ProductListComponent implements OnInit {
     for (let i = 0; i < this.numberOfPages; i++) {
       result.push(i + 1);
     }
+    console.log(this.products.content[0].imageURL);
     return result;
   }
 

@@ -9,18 +9,22 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { DetailsUploadComponent } from './details-upload/details-upload.component';
 import { FormUploadComponent } from './upload-form/form-upload.component';
 import { ListUploadComponent } from './uploads-list/list-upload.component';
+import { UploadProductComponent } from './upload-product/upload-product.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   declarations: [
     ProductListComponent,
     DetailsUploadComponent,
     FormUploadComponent,
     ListUploadComponent,
-    PagerComponent
+    PagerComponent,
+    UploadProductComponent
   ],
   providers: [
     CatalogService,

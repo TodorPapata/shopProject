@@ -13,8 +13,8 @@
         </a>
       </li>
     </ul>
-    <div *ngFor="let product of products.content">
-      <details-upload productTemplate={{product.name}}></details-upload>
+    <div class = "row">
+      <details-upload *ngFor="let product of products.content" [productTemplate]="product"></details-upload>
     </div>
   </div>
 </div>

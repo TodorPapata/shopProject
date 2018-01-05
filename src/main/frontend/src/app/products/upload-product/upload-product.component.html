@@ -1,0 +1,36 @@
+<form [formGroup]="addProductForm" (ngSubmit)="addProduct(addProductForm.value)"> 
+    
+      <div class="form-group">
+        <label>Name
+        </label>
+        <input type="text" formControlName="name">
+      </div>
+  
+      <div>
+        <label>Price</label>
+        <input type="number"
+               class="form-control"
+               formControlName="price" 
+               required>
+      </div>
+
+      <div>
+        <label>Code</label>
+        <input type="password"
+               class="form-control"
+               formControlName="code" 
+               required>
+      </div>
+  
+    <div>
+      <label>Description</label>
+      <input type="email"
+             class="form-control"
+             formControlName="description" 
+             required>
+    </div>
+
+    <input type="submit" class="button expanded" value="Submit Form" [disabled]="!rForm.valid">
+
+    <pre>{{myform.value | json}}</pre>
+  </form>

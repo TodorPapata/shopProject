@@ -1,9 +1,9 @@
 export class ProductTemplate {
     id: number;
     name: string;
-    price?: number;
+    price: number;
     description?: string;
     code?: string;
-    imageUrl?: string;
+    imageURL?: string;
     dateAdded?: Date;
 }

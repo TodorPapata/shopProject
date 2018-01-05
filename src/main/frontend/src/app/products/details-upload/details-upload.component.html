@@ -1,2 +1,14 @@
-<img src="{{fileUpload}}" alt="{{fileUpload}}" style="max-width:350px"/>
-{{productTemplate}}
+<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" [src]="productTemplate.imageURL" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">{{productTemplate.name}}</a>
+            </h4>
+            <p>code: {{productTemplate.code}}</p>
+            <p>price: {{productTemplate.price}}</p>
+            <p>{{productTemplate.imageUrl}}</p>
+            <p class="card-text">{{productTemplate.description}}</p>
+          </div>
+        </div>
+</div>
