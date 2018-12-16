@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { PagerComponent } from './pager/pager.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { UploadProductComponent } from './products/upload-product/upload-product.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   {
@@ -26,9 +27,10 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
+    NavbarComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     ProductsModule,
      RouterModule.forRoot(

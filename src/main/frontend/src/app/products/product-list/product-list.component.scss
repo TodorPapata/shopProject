@@ -1,0 +1,22 @@
+.bg
+{
+    background: url("http://positioning-roulette.com/wp-content/uploads/2014/12/Parallax-Background-Light-05.jpg") repeat fixed 100%;
+}
+
+ul.pagination>li{
+
+}
+
+.page-item .page-link {
+
+  z-index: 1;
+
+  color: #fff;
+
+  background-color: #343a40;
+}
+
+.page-item.active .page-link {
+  background-color: rgba(255, 255, 255, .9);
+  color: black;
+}

@@ -6,15 +6,12 @@ import com.paptashop.shop.services.StorageService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.util.Date;
 
 @SpringBootApplication
-@ComponentScan("com.paptashop.shop")
 public class ShopApplication implements CommandLineRunner{
     private static final String IMAGE_URL = "http://chariotlearning.com/wp-content/uploads/2015/12/Testing_in_Progress.gif";
     @Resource
@@ -27,7 +24,7 @@ public class ShopApplication implements CommandLineRunner{
     }
 
     @Override
-    public void run(String... args) throws Exception{
+    public void run(String... args) throws Exception {
         storageService.deleteAll();
         storageService.init();
         catalogService.addProductTemplate(new ProductTemplate(1L,"test1",new BigDecimal(3),"code",IMAGE_URL, new Date() ));

@@ -5,7 +5,7 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 @Component({
   selector: 'app-upload-product',
   templateUrl: './upload-product.component.html',
-  styleUrls: ['./upload-product.component.css']
+  styleUrls: ['./upload-product.component.scss']
 })
 export class UploadProductComponent implements OnInit {
   addProductForm: FormGroup;

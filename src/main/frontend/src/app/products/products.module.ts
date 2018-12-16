@@ -1,4 +1,4 @@
-import { PagerComponent } from './../pager/pager.component';
+import { PagerComponent } from '../pager/pager.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UploadFileService } from './upload.service';
 import { CatalogService } from './catalog.service';
@@ -11,12 +11,14 @@ import { FormUploadComponent } from './upload-form/form-upload.component';
 import { ListUploadComponent } from './uploads-list/list-upload.component';
 import { UploadProductComponent } from './upload-product/upload-product.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   imports: [
     CommonModule,
     HttpModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule
   ],
   declarations: [
     ProductListComponent,

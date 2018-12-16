@@ -6,7 +6,7 @@ import {UploadFileService} from '../upload.service';
 @Component({
   selector: 'list-upload',
   templateUrl: './list-upload.component.html',
-  styleUrls: ['./list-upload.component.css']
+  styleUrls: ['./list-upload.component.scss']
 })
 export class ListUploadComponent implements OnInit {
 

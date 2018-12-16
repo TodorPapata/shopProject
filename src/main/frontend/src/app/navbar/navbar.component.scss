@@ -1,0 +1,24 @@
+
+nav > div > ul > li > a {
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 40px;
+  padding: 0 2rem;
+  -webkit-transition: all .3s ease;
+}
+
+nav > div > ul > li > a:hover {
+  background: rgba(255, 255, 255, .9);
+  color: black;
+}
+
+nav > div > ul > li > a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  background-color:black;
+}
+
